@@ -1,0 +1,153 @@
+/* Thiết lập chung cho body, header, section, footer */
+body, header, section, footer {
+    background-color: #000; /* Nền màu đen */
+    color: #fff; /* Chữ màu trắng */
+    margin: 0; /* Loại bỏ khoảng cách lề mặc định */
+    padding: 0; /* Loại bỏ khoảng đệm mặc định */
+}
+
+/* Thiết lập chung cho đăng nhập và tiến trình */
+#user-login, #progress-tracker, nav ul {
+    text-align: center; /* Căn giữa nội dung theo chiều ngang */
+}
+
+/* Thiết lập cho thanh điều hướng */
+nav ul {
+    list-style: none; /* Loại bỏ các dấu đầu dòng mặc định */
+    padding: 0; /* Loại bỏ padding mặc định */
+    margin: 0; /* Loại bỏ margin mặc định */
+}
+
+nav ul li {
+    display: inline-block; /* Hiển thị các liên kết trên cùng một dòng */
+    margin: 0 10px; /* Tạo khoảng cách giữa các liên kết */
+}
+
+/* Thiết lập cho các liên kết trong thanh điều hướng */
+nav a {
+    text-decoration: none; /* Loại bỏ gạch chân của liên kết */
+    font-size: 18px; /* Tăng kích thước chữ */
+    color: #FFFFFF; /* Màu chữ trắng */
+    padding: 10px 15px; /* Thêm padding */
+    border: 1px solid #FFFFFF; /* Thêm đường viền màu trắng */
+    border-radius: 5px; /* Bo tròn góc */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển màu nền */
+}
+
+/* Hiệu ứng khi di chuột qua liên kết */
+nav a:hover {
+    background-color: #f2f2f2; /* Màu nền xám nhạt */
+    color: #000000; /* Màu chữ đen */
+}
+
+/* Thiết lập cho tiêu đề h2 */
+h2 {
+    color: #3498db; /* Màu xanh dương */
+    font-family: 'Arial', sans-serif; /* Kiểu chữ Arial */
+}
+
+/* Thiết lập cho đoạn văn */
+p {
+    font-size: 18px; /* Kích thước chữ */
+    line-height: 1.5; /* Khoảng cách dòng */
+    color: #555; /* Màu chữ xám đậm */
+}
+
+/* Màu nền cho thẻ body */
+body {
+    background-color: #f7f7f7; /* Màu nền xám nhạt */
+}
+
+/* Cấu trúc và hiệu ứng cho section */
+section {
+    padding: 20px; /* Thêm padding */
+    border: 1px solid #ddd; /* Viền màu xám nhạt */
+    border-radius: 8px; /* Bo tròn góc */
+    margin-bottom: 20px; /* Khoảng cách phía dưới */
+}
+
+/* Hiệu ứng khi di chuột qua section */
+section:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Bóng mờ */
+}
+
+/* Hiệu ứng khi di chuột qua liên kết và nút */
+a:hover, button:hover {
+    color: #555; /* Màu chữ xám đậm */
+}
+
+/* Hiệu ứng khi di chuột qua nút */
+button:hover {
+    background-color: #555; /* Màu nền xám đậm */
+}
+
+/* Thiết lập cho header */
+header {
+    padding: 20px; /* Thêm padding */
+    text-align: center; /* Căn giữa nội dung */
+}
+
+/* Thiết lập cho tiêu đề h1 */
+h1 {
+    color: #333; /* Màu chữ xám đen */
+}
+
+/* Loại bỏ kiểu danh sách và thiết lập các liên kết inline trong thanh điều hướng */
+nav ul {
+    list-style-type: none; /* Loại bỏ kiểu danh sách */
+}
+
+nav ul li {
+    display: inline; /* Hiển thị inline */
+    margin-right: 20px; /* Khoảng cách giữa các li */
+}
+
+/* Thiết lập cho form */
+form {
+    display: flex; /* Hiển thị dạng flex */
+    flex-direction: column; /* Sắp xếp theo cột */
+    max-width: 300px; /* Chiều rộng tối đa */
+    margin: auto; /* Căn giữa */
+}
+
+/* Thiết lập cho input và textarea */
+input, textarea {
+    margin-bottom: 10px; /* Khoảng cách phía dưới */
+    padding: 8px; /* Padding */
+}
+
+/* Thiết lập cho footer */
+footer {
+    background-color: #333; /* Nền màu xám đen */
+    color: #fff; /* Chữ màu trắng */
+    padding: 20px; /* Thêm padding */
+    text-align: center; /* Căn giữa nội dung */
+}
+
+/* Thiết lập cho blockquote */
+blockquote {
+    border-left: 3px solid #555; /* Đường viền trái màu xám đậm */
+    padding-left: 10px; /* Padding trái */
+    margin-bottom: 20px; /* Khoảng cách phía dưới */
+}
+
+/* Thiết lập cho nút */
+button {
+    background-color: #333; /* Nền màu xám đen */
+    color: #fff; /* Chữ màu trắng */
+    padding: 10px 20px; /* Padding */
+    cursor: pointer; /* Kiểu con trỏ chuột */
+}
+
+/* Thiết lập cho container chứa các thẻ của thực đơn */
+.menu-container {
+    display: grid; /* Hiển thị dạng lưới */
+    grid-template-columns: repeat(4, 1fr); /* 4 cột có kích thước bằng nhau */
+    grid-gap: 20px; /* Khoảng cách giữa các ảnh */
+}
+
+/* Thiết lập cho ảnh trong mỗi thẻ thực đơn */
+.menu-item img {
+    width: 100%; /* Chiếm 100% chiều rộng */
+    height: auto; /* Tự động điều chỉnh chiều cao */
+}
