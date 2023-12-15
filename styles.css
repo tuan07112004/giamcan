@@ -149,3 +149,13 @@ footer {
 #online-consultation button:hover {
     background-color: #43A047;
 }
+
+
+.image-container {
+    display: flex; /* Thiết lập này cho phép bạn sử dụng flexbox, một kỹ thuật hiện đại để sắp xếp layout */
+    justify-content: center; /* Căn giữa nội dung theo chiều ngang */
+    align-items: center; /* Căn giữa nội dung theo chiều dọc */
+    height: 120 vh; /* Tùy chọn: Điều chỉnh chiều cao theo nhu cầu của bạn */
+}
+
+
