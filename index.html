@@ -6,7 +6,6 @@
 <title>Web hỗ trợ giảm cân SlimJoy</title>
 <link rel="stylesheet" href="styles.css">
   <body>
-    <script src="main.js"></script>
     <div class="navbar">
         <div class="logo">
           <img src="https://appedreview.com/app/wp-content/uploads/2014/04/FI_297368629_asaArtwork_featured1.jpg" width = 40px alt="Logo">
@@ -14,7 +13,7 @@
            </div>
         <nav>
           <ul>
-            <a  href="#about">Giới Thiệu</a></li>
+            <a href="#about">Giới Thiệu</a></li>
             <a href="#plans">Kế Hoạch Giảm Cân</a></li>
             <a href="#tips">Mẹo Giảm Cân</a></li>
             <a href="#contact">Liên Hệ</a></li>
@@ -23,6 +22,14 @@
         <div>
           <a href="#user-login">Đăng Nhập</a>
           <a href="#registration-form">Đăng Ký</a>
+<script>
+  function switchForm(hideFormId, showFormId) {
+    var hideForm = document.getElementById(hideFormId);
+    var showForm = document.getElementById(showFormId);
+    hideForm.style.display = "none";
+    showForm.style.display = "block";
+  }
+</script>
         </div>
       </div>
       
@@ -51,6 +58,19 @@
     <input type="submit" value="Đăng Ký">
   </form>
   <button onclick="toggleForms()">Bạn đã có tài khoản</button>
+  <script>
+    function toggleForms() {
+      var registrationForm = document.getElementById('user-registration');
+      var loginForm = document.getElementById('user-login');
+      if (registrationForm.style.display === "none") {
+        registrationForm.style.display = "block";
+        loginForm.style.display = "none";
+      } else {
+        registrationForm.style.display = "none";
+        loginForm.style.display = "block";
+      }
+    }
+  </script>
 </section>
 
 
@@ -137,6 +157,8 @@
               <input type="number" id="weight" placeholder="Cân nặng hiện tại (kg)" required>
               <input type="submit" value="Lưu">
       </form>
+      <div id="success-message" style="display: none; color: green;">Thông tin đã được lưu thành công!</div>
+
       <h2>Công cụ tính toán calo</h2>
       <label for="food">Thực phẩm:</label>
       <input type="text" id="food" placeholder="Nhập thực phẩm"> 
@@ -340,8 +362,11 @@
 
             </div>
             <textarea id="new-post" placeholder="Viết bài đăng mới"></textarea>
-            <button onclick="submitPost()">Đăng Bài</button>
-        </section>
+<button onclick="submitPost()">Đăng Bài</button>
+
+<div id="post-list">
+  <!-- Nội dung bài viết sẽ được thêm vào đây -->
+</div>
     
 
 
@@ -377,28 +402,38 @@
 
 
         <!-- Đăng Ký Nhận THÔNG TIN -->
-        <section id="newsletter">
+        <section id="bản-tin">
           <div class="email-signup">
-            <h2>Đăng ký nhận thông báo</h2>
+            <h2>Đăng ký nhận thông tin báo</h2>
             <p>Nhận email với các mẹo giảm cân, công thức nấu ăn lành mạnh, ưu đãi và hơn thế nữa!</p>
-            <form action="your-server-side-script" method="POST">
-              <form id="newsletter-form">
-                <input type="email" placeholder="Nhập email của bạn">
-                <input type="submit" value="Đăng Ký">
-            </form>
+            <form id="newsletter-form" action="javascript:void(0);" method="POST">
+              <input type="email" id="email-input" placeholder="Nhập email của bạn">
               <div class="checkboxes">
                 <label>
-                  <input type="checkbox" name="newsletter">
-                  Tôi muốn nhận bản tin SlimJoy và được thông báo về các ưu đãi và sự kiện qua e-mail. Tôi có thể thu hồi sự đồng ý của mình bất cứ lúc nào thông qua liên kết hủy đăng ký trong email hoặc tin nhắn.
+                  <input type="checkbox" name="bản-tin">
+                  Tôi muốn nhận bản tin SlimJoy và được thông báo về các ưu đãi và sự kiện qua e-mail. Tôi có thể thu hồi ý kiến của mình bất cứ lúc nào thông qua liên kết đăng ký trong email hoặc tin nhắn.
                 </label>
                 <label>
                   <input type="checkbox" name="age_confirmation" required>
                   Tôi xác nhận rằng tôi từ 18 tuổi trở lên.
-                                </label>
+                </label>
               </div>
+              <input type="submit" value="Đăng Ký" onclick="registerEmail()">
             </form>
           </div>
         </section>
+        
+        <script>
+          function registerEmail() {
+            var email = document.getElementById('email-input').value;
+            if (email) {
+              alert('Đã Đăng Ký Gmail Thành Công');
+              window.location.href = "#about";
+            } else {
+              alert('Vui Lòng Nhập Địa Chỉ Gmail Của Bạn');
+            }
+          }
+        </script>
         
 
         <!-- LIÊN HỆ -->
@@ -409,4 +444,5 @@
             <p>Email: <a href="hotrogiamcan@gmail.com">SlimJoy@gmail.com</a> <br /></p>
         </footer>
     </body>
+        <script src="main.js"></script>
     </html>
