@@ -95,6 +95,64 @@ nav a {
   transition: background-color 0.3s;
 }
 
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container h1 {
+  text-align: center;
+  color: #333;
+}
+
+.container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.container li {
+  margin-bottom: 20px;
+  padding: 10px;
+  background: #fff;
+  border-left: 5px solid #e4630d; /* A green accent line */
+}
+
+.container li h2, .container li h3 {
+  color: #e4630d;
+}
+
+.container p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Hiệu ứng hover cho các khối */
+.container li:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+} 
+
+/* Animation khi cuộn trang */
+@keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 40px, 0);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+.container li {
+  animation: fadeInUp 0.8s ease-in-out forwards;
+}
+
+
 /* Tiêu đề và đoạn văn */
 h2 {
   color: #3498db;
@@ -164,8 +222,8 @@ footer {
 /* Thẻ thực đơn */
 .menu-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 00px;
 }
 
 .menu-item img {
