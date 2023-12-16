@@ -50,8 +50,8 @@
     <input type="password" id="new-password" placeholder="Mật khẩu mới" required>
     <input type="submit" value="Đăng Ký">
   </form>
+  <button onclick="toggleForms()">Bạn đã có tài khoản</button>
 </section>
-<button onclick="toggleForms()">Bạn đã có tài khoản</button>
 
 
 
@@ -252,6 +252,7 @@
 
       <!-- Phần Blog -->
       <section id="blog">
+        <div class="container">
               <h2>Blog </h2>
               <article>
                   <h3 style="font-size: 25px">Tiết lộ bí quyết giảm cân cùng Châu Bùi – Nàng Fashionista đình đám</h3>
@@ -267,7 +268,7 @@
                       </figure>   <br /> 
                       </div>
 
-                      <b style="font-size: 25px">Để việc giảm cân đạt hiệu quả, Châu Bùi đã áp dụng một số phương pháp sau: </b> <br /> 
+                      <h3 style="font-size: 25px"> Để việc giảm cân đạt hiệu quả, Châu Bùi đã áp dụng một số phương pháp sau: </h3> 
                   </p>
 
                   <p style="font-size: 20px">
@@ -309,6 +310,7 @@
 
                     <a href="#">Đọc thêm</a>
                 </article>
+            </div>
         </section>
 
 
@@ -316,8 +318,26 @@
         <!-- DIỄN ĐÀN GIẢM CÂN -->
         <section id="user-forum">
             <h2>Diễn Đàn Giảm Cân</h2>
-            <div id="forum-posts">
-                <!-- Bài đăng diễn đàn ở đây -->
+
+            <div class="testimonials-container">
+            <div class="testimonial">
+                <img src="https://kenh14cdn.com/2020/7/10/v2-5e395f6ee038806df963f1b12704dbbe1440w-15943467032452060331921-159434673259383241904.png" alt="Nikki" class="testimonial-image">
+                <p class="testimonial-quote">“Thanh Trang là một cô gái đến từ tỉnh Kiên Giang từng bị người yêu bỏ vì quá béo. Nhưng thay vì chấp nhận số phận, cô đã quyết tâm giảm 15kg chỉ trong vòng 7 tháng…”</p>
+                <p class="testimonial-author">Thanh Trang</p>
+            </div>
+            
+            <div class="testimonial">
+                <img src="https://cdn.eva.vn/upload/4-2022/images/2022-11-16/1668589089-477-thumbnail-width640height480.jpg" alt="Naomi" class="testimonial-image">
+                <p class="testimonial-quote">“Thùy Linh chia sẻ chị đã có thời điểm nặng đến 72 kg sau sinh và điều này đã khiến chị rơi vào trầm cảm. Nhưng nhờ những phương pháp giảm cân đúng đắn chị đã lấy lại vóc dáng như thời thiếu nữ…”</p>
+                <p class="testimonial-author">Chị Thùy Linh- bà mẹ bỉm sữa 2 con</p>
+            </div>
+            
+            <div class="testimonial">
+                <img src="https://sohanews.sohacdn.com/thumb_w/660/2019/4/13/photo-1-155516244491465930400.jpg" alt="Stephen" class="testimonial-image">
+                <p class="testimonial-quote">“Thừa cân giảm mỡ quá nhiều khiến cho Thái ngày càng nặng nề, thậm chí không thể mặc chiếc áo sơ mi cỡ lớn nhất. Chính điều này làm cho anh quyết tâm giảm cân…”</p>
+                <p class="testimonial-author">Trần Thái</p>
+            </div>
+
             </div>
             <textarea id="new-post" placeholder="Viết bài đăng mới"></textarea>
             <button onclick="submitPost()">Đăng Bài</button>

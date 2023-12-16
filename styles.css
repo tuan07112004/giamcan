@@ -65,7 +65,7 @@ body, header, section, footer {
 }
 
 /* Đăng nhập và tiến trình */
-#user-login, registration-form, #progress-tracker, nav ul {
+#user-login,  #progress-tracker,#user-registration, nav ul {
   text-align: center;
 }
 
@@ -121,7 +121,7 @@ nav a {
   border-left: 5px solid #e4630d; /* A green accent line */
 }
 
-.container li h2, .container li h3 {
+.container li h2, .container li h3, .container h3 {
   color: #e4630d;
 }
 
@@ -302,5 +302,33 @@ footer {
   display: block;
   text-align: left;
   margin: 10px 0;
+}
+
+.testimonials-container {
+  display: flex; /* Sử dụng flexbox để sắp xếp các thành phần */
+  justify-content: space-around; /* Khoảng cách đều giữa các thành phần */
+  padding: 20px; /* Đệm xung quanh container */
+}
+
+.testimonial {
+  background: #fff; /* Nền trắng cho từng chứng thực */
+  padding: 20px; /* Đệm xung quanh mỗi chứng thực */
+  width: 300px; /* Chiều rộng tùy chỉnh theo ý bạn */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Bóng đổ nhẹ */
+  border-radius: 4px; /* Bo góc */
+  text-align: center; /* Căn giữa nội dung */
+  margin: 10px; /* Khoảng cách xung quanh mỗi chứng thực */
+}
+
+.testimonial-image {
+  width: 100%; /* Điều chỉnh kích thước theo ý muốn */
+  height: auto; /* Chiều cao tự động phù hợp với chiều rộng */
+  border-radius: 50%; /* Tạo hình ảnh tròn */
+  margin-bottom: 20px; /* Khoảng cách phía dưới hình ảnh */
+}
+
+.testimonial-quote {
+  font-style: italic; /* Nghiêng chữ cho trích dẫn */
+  color: #555; /* Màu chữ cho trích dẫn */
 }
 
