@@ -1,161 +1,248 @@
-/* Thiết lập chung */
+body, html {
+    margin: 0; /* Xóa lề mặc định */
+    height: 100%; /* Đặt chiều cao tối đa của viewport */
+    padding: 0; /* Thêm dòng này để đảm bảo không có padding mặc định */
+    font-family: Arial, sans-serif; /* Chọn phông chữ mặc định */
+  }
+  
+  .navbar {
+    display: flex; /* Sử dụng bố cục flexbox */
+    justify-content: space-between; /* Cân bằng khoảng cách giữa các thành phần */
+    align-items: center; /* Căn giữa các items theo chiều dọc */
+    height: 60px; /* Điều chỉnh chiều cao của navbar theo ý muốn */
+    width: 100%; /* Chiều rộng tối đa */
+    top: 0; /* Đặt navbar sát đầu trang */
+    z-index: 1000; /* Đảm bảo navbar nằm trên cùng so với các thành phần khác */
+    color: black; /* Màu chữ */
+  }
+  
+  .logo-container {
+    display: flex; /* Sử dụng bố cục flexbox */
+    align-items: center; /* Căn giữa logo và chữ theo chiều dọc */
+  }
+  
+  .logo {
+    height: 50px; /* Chiều cao của logo */
+    margin-right: 70px; /* Khoảng cách phải của logo */
+  }
+  
+  .logo-text {
+    font-size: 40px; /* Cỡ chữ của văn bản */
+    font-weight: bold; /* Độ đậm của chữ */
+  }
+  
+  .navbar a {
+    text-decoration: none; /* Bỏ gạch dưới liên kết */
+    padding: 30px; /* Đệm xung quanh liên kết */
+    color: black; /* Màu chữ */
+    font-size: 20px; /* Cỡ chữ */
+  }
+  
+  .navbar a:hover {
+    background-color: #ddd; /* Màu nền khi rê chuột lên liên kết */
+    color: black; /* Màu chữ khi rê chuột lên */
+  }
+  
+  .navbar a.active {
+    background-color: #4CAF50; /* Màu nền của liên kết đang được chọn */
+  }
+  
+  .navbar input[type="text"] {
+    padding: 14px; /* Đệm của ô nhập */
+    border: none; /* Bỏ viền */
+    margin-top: 8px; /* Khoảng cách trên */
+    margin-right: 16px; /* Khoảng cách phải */
+    font-size: 17px; /* Cỡ chữ */
+    background: rgba(255,255,255,0.5); /* Nền bán trong suốt */
+  }
+  
+
 body, header, section, footer {
-    background-color: #000;
-    color: #fff;
-    margin: 0;
-    padding: 0;
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  padding: 0;
 }
 
 /* Đăng nhập và tiến trình */
 #user-login, #progress-tracker, nav ul {
-    text-align: center;
+  text-align: center;
 }
 
 #question {
-    width: 40%; 
+  width: 40%; 
 }
 
 /* Thanh điều hướng */
 nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: noư;
+  padding: 0;
+  margin: 0;
 }
 
 nav ul li {
-    display: inline-block;
-    margin: 0 10px;
+  display: inline-block;
+  margin: 0 10px;
 }
 
 nav a {
-    text-decoration: none;
-    font-size: 18px;
-    color: #FFFFFF;
-    padding: 10px 15px;
-    border: 1px solid #FFFFFF;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+  text-decoration: none;
+  font-size: 18px;
+  color: #FFFFFF;
+  padding: 10px 15px;
+  border: 1px solid #FFFFFF;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
 /* Tiêu đề và đoạn văn */
 h2 {
-    color: #3498db;
-    font-family: 'Arial', sans-serif;
+  color: #3498db;
+  font-family: 'Arial', sans-serif;
 }
 
 p {
-    font-size: 18px;
-    line-height: 1.5;
-    color: #555;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #555;
 }
 
 /* Nền cho thẻ body */
 body {
-    background-color: #f7f7f7;
+  background-color: #f7f7f7;
 }
 
 /* Section */
 section {
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
 }
 
 section:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Hiệu ứng hover */
 a:hover, button:hover {
-    color: #555;
-    background-color: #555;
+  color: #555;
+  background-color: #555;
 }
 
 /* Header */
 header {
-    padding: 20px;
-    text-align: center;
+  padding: 20px;
+  text-align: center;
 }
 
 h1 {
-    color: #333;
+  color: #333;
 }
 
 /* Form */
 form {
-    display: flex;
-    flex-direction: column;
-    max-width: 300px;
-    margin: auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: auto;
 }
 
 input, textarea {
-    margin-bottom: 10px;
-    padding: 8px;
+  margin-bottom: 10px;
+  padding: 8px;
 }
 
 /* Footer */
 footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
 }
 
 /* Thẻ thực đơn */
 .menu-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
 }
 
 .menu-item img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 /* Tư vấn trực tuyến và FAQ */
 #online-consultation {
-    background-color: #000;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #000;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #online-consultation h2 {
-    color: #3498db;
-    margin-bottom: 15px;
+  color: #3498db;
+  margin-bottom: 15px;
 }
 
 .faq-item ul {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 .faq-item li {
-    background-color: #333;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  background-color: #333;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .faq-item li:hover {
-    background-color: #0fa9f0e7;
+  background-color: #0fa9f0e7;
 }
 
 #online-consultation button:hover {
-    background-color: #43A047;
+  background-color: #43A047;
 }
 
 
 .image-container {
-    display: flex; /* Thiết lập này cho phép bạn sử dụng flexbox, một kỹ thuật hiện đại để sắp xếp layout */
-    justify-content: center; /* Căn giữa nội dung theo chiều ngang */
-    align-items: center; /* Căn giữa nội dung theo chiều dọc */
-    height: 120 vh; /* Tùy chọn: Điều chỉnh chiều cao theo nhu cầu của bạn */
+  display: flex; /* Thiết lập này cho phép bạn sử dụng flexbox, một kỹ thuật hiện đại để sắp xếp layout */
+  justify-content: center; /* Căn giữa nội dung theo chiều ngang */
+  align-items: center; /* Căn giữa nội dung theo chiều dọc */
+  height: 120 vh; /* Tùy chọn: Điều chỉnh chiều cao theo nhu cầu của bạn */
 }
 
+.email-signup {
+  background-color: black; /* Or any color you prefer */
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.email-signup h2 {
+  margin-top: 0;
+}
+
+.email-signup form {
+  /* Add your form styling here */
+}
+
+.email-signup input[type="email"] {
+  /* Style your email input field */
+}
+
+.email-signup button {
+  /* Style your button */
+}
+
+.email-signup .checkboxes label {
+  display: block;
+  text-align: left;
+  margin: 10px 0;
+}
 
