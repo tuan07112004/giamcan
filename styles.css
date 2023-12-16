@@ -65,7 +65,7 @@ body, header, section, footer {
 }
 
 /* Đăng nhập và tiến trình */
-#user-login, #progress-tracker, nav ul {
+#user-login, registration-form, #progress-tracker, nav ul {
   text-align: center;
 }
 
