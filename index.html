@@ -6,7 +6,6 @@
 <title>Web hỗ trợ giảm cân SlimJoy</title>
 <link rel="stylesheet" href="styles.css">
   <body>
-    <script src="main.js"></script>
     <div class="navbar">
         <div class="logo">
           <img src="https://appedreview.com/app/wp-content/uploads/2014/04/FI_297368629_asaArtwork_featured1.jpg" width = 40px alt="Logo">
@@ -14,7 +13,7 @@
            </div>
         <nav>
           <ul>
-            <a  href="#about">Giới Thiệu</a></li>
+            <a href="#about">Giới Thiệu</a></li>
             <a href="#plans">Kế Hoạch Giảm Cân</a></li>
             <a href="#tips">Mẹo Giảm Cân</a></li>
             <a href="#contact">Liên Hệ</a></li>
@@ -23,6 +22,14 @@
         <div>
           <a href="#user-login">Đăng Nhập</a>
           <a href="#registration-form">Đăng Ký</a>
+<script>
+  function switchForm(hideFormId, showFormId) {
+    var hideForm = document.getElementById(hideFormId);
+    var showForm = document.getElementById(showFormId);
+    hideForm.style.display = "none";
+    showForm.style.display = "block";
+  }
+</script>
         </div>
       </div>
       
@@ -51,8 +58,20 @@
     <input type="submit" value="Đăng Ký">
   </form>
   <button onclick="toggleForms()">Bạn đã có tài khoản</button>
+  <script>
+    function toggleForms() {
+      var registrationForm = document.getElementById('user-registration');
+      var loginForm = document.getElementById('user-login');
+      if (registrationForm.style.display === "none") {
+        registrationForm.style.display = "block";
+        loginForm.style.display = "none";
+      } else {
+        registrationForm.style.display = "none";
+        loginForm.style.display = "block";
+      }
+    }
+  </script>
 </section>
-
 
 
       <!-- GIỚI THIỆU -->
@@ -137,6 +156,8 @@
               <input type="number" id="weight" placeholder="Cân nặng hiện tại (kg)" required>
               <input type="submit" value="Lưu">
       </form>
+      <div id="success-message" style="display: none; color: green;">Thông tin đã được lưu thành công!</div>
+
       <h2>Công cụ tính toán calo</h2>
       <label for="food">Thực phẩm:</label>
       <input type="text" id="food" placeholder="Nhập thực phẩm"> 
@@ -340,65 +361,162 @@
 
             </div>
             <textarea id="new-post" placeholder="Viết bài đăng mới"></textarea>
-            <button onclick="submitPost()">Đăng Bài</button>
-        </section>
-    
+        <button onclick="submitPost()">Đăng Bài</button>
 
+<div id="post-list">
+
+</div>
+    
 
         <!-- TƯ VẤN TRỰC TUYẾN VÀ CÂU HỎI THƯỜNG GẶP (FAQ) -->
         <section id="online-consultation">
+          <div class="faq">
             <h2>Tư Vấn Trực Tuyến</h2>
-            <p>Đặt câu hỏi cho chuyên gia dinh dưỡng hoặc huấn luyện viên cá nhân của chúng tôi.</p>
-            <textarea id="question" placeholder="Nhập câu hỏi của bạn"></textarea>
-            <button onclick="submitQuestion()">Gửi Câu Hỏi</button>
- 
-            <h2>Câu Hỏi Thường Gặp</h2>
-                <div class="faq-item">
-            <ul>
-                <li>1. Cách giảm mỡ bụng cho người thừa cân</li>
-                <li>2. Tập gì để giảm cân</li>
-                <li>3. Làm sao tránh rạn da sau khi giảm cân</li>
-                <li>4. Làm thế nào để giảm cân sau sinh</li>
-                <li>5. Có phải chỉ ăn trái cây sẽ không mập</li>
-                <li>6. Ăn kiêng có ảnh hưởng đến kỳ kinh</li>
-                <li>7. Có phải uống nước cũng mập</li>
-                <li>8. Thức khuya đói bụng phải làm sao</li>
-                <li>9. Stress có gây ra béo phì không</li>
-                <li>10. Vì sao cần ăn sáng khi giảm cân?</li>
-                <li>11. Tăng cân trở lại có ảnh hưởng đến sức khoẻ không</li>
-                <li>12. Có cần kiêng tinh bột?</li>
-                <li>13. Uống cà phê có giảm cân được không</li>
-                <li>14. Mỗi ngày chỉ ăn 1 bữa, tại sao vẫn không giảm cân?</li>
-                <li>15. Khi giảm cân không được ăn gì?</li>
-            </ul>
-                </div>
-                <!-- Thêm câu hỏi và trả lời khác ở đây -->
+           <p>Đặt câu hỏi cho chuyên gia dinh dưỡng hoặc huấn luyện viên cá nhân của chúng tôi.</p>
+           <textarea id="question" placeholder="Nhập câu hỏi của bạn"></textarea>
+           <button onclick="submitQuestion()">Gửi Câu Hỏi</button>
+          <h2 class="faq-title">Câu Hỏi Thường Gặp</h2>
+          <div class="faq-item">
+            <button class="faq-question" style="font-size: 17px">1. Cách giảm mỡ bụng cho người thừa cân</button>
+            <div class="faq-answer">
+              <p>Kết hợp chế độ ăn giàu protein, hạn chế carbs đơn giản và chất béo không lành mạnh. Tập luyện bao gồm cả cardio và bài tập sức đề kháng để đốt cháy calo và tăng cường cơ.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" style="font-size: 17px">2. Tập gì để giảm cân</button>
+            <div class="faq-answer">
+              <p>Kết hợp giữa các bài tập cardio như chạy bộ, bơi lội, và các bài tập cường độ cao như HIIT cùng với việc tập luyện sức đề kháng như nâng tạ hoặc yoga.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" style="font-size: 17px">3. Làm sao tránh rạn da sau khi giảm cân</button>
+            <div class="faq-answer">
+              <p>Giảm cân từ từ và ổn định, dưỡng ẩm cho da và cung cấp đủ protein để hỗ trợ độ đàn hồi của da.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" style="font-size: 17px">4. Làm thế nào để giảm cân sau sinh</button>
+            <div class="faq-answer">
+              <p>Hãy kiên nhẫn và cho cơ thể thời gian hồi phục sau sinh. Sau đó, tập trung vào chế độ ăn cân đối và tập luyện nhẹ nhàng như đi bộ cùng việc bổ sung dinh dưỡng cần thiết khi cho con bú.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" style="font-size: 17px">5. Có phải chỉ ăn trái cây sẽ không mập</button>
+            <div class="faq-answer">
+              <p> Trái cây tốt cho sức khỏe nhưng ăn quá nhiều cũng có thể cung cấp nhiều calo và đường. Cần một chế độ ăn cân đối và đa dạng.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" style="font-size: 17px">6. Ăn kiêng có ảnh hưởng đến kỳ kinh</button>
+            <div class="faq-answer">
+              <p>Ăn kiêng quá mức hoặc thiếu hụt dinh dưỡng có thể ảnh hưởng đến chu kỳ kinh nguyệt.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" style="font-size: 17px">7. Có phải uống nước cũng mập</button>
+            <div class="faq-answer">
+              <p> Nước không chứa calo nên không làm bạn tăng cân. Uống đủ nước thậm chí có thể hỗ trợ giảm cân.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" style="font-size: 17px">8. Thức khuya đói bụng phải làm sao</button>
+            <div class="faq-answer">
+              <p> Cố gắng thiết lập một lịch trình ngủ đều đặn và tránh ăn vặt vào buổi tối. Nếu cảm thấy đói, hãy chọn thức ăn nhẹ và lành mạnh.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" style="font-size: 17px">9. Stress có gây ra béo phì không</button>
+            <div class="faq-answer">
+              <p> Stress có thể gây ra việc tăng cân do ảnh hưởng đến hormone và thúc đẩy việc ăn vặt không lành mạnh.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" style="font-size: 17px">10. Vì sao cần ăn sáng khi giảm cân?</button>
+            <div class="faq-answer">
+              <p>Ăn sáng giúp khởi động trao đổi chất và có thể giúp kiểm soát cân nặng bằng cách giảm cảm giác đói và cơn thèm ăn vào cuối ngày.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" style="font-size: 17px">11. Tăng cân trở lại có ảnh hưởng đến sức khoẻ không</button>
+            <div class="faq-answer">
+              <p>Tăng cân đột ngột có thể ảnh hưởng xấu đến sức khỏe tim mạch, đường huyết và sức khỏe tổng thể. Nên duy trì cân nặng ổn định.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" style="font-size: 17px">12. Có cần kiêng tinh bột?</button>
+            <div class="faq-answer">
+              <p> Không cần thiết phải kiêng hoàn toàn tinh bột nhưng nên hạn chế tinh bột tinh chế và chọn nguồn tinh bột nguyên hạt lành mạnh.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" style="font-size: 17px">13. Uống cà phê có giảm cân được không</button>
+            <div class="faq-answer">
+              <p>Cà phê có thể hỗ trợ giảm cân nhờ khả năng tăng cường trao đổi chất và giảm cảm giác đói tạm thời.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" style="font-size: 17px">14. Mỗi ngày chỉ ăn 1 bữa, tại sao vẫn không giảm cân?</button>
+            <div class="faq-answer">
+              <p> Ăn quá ít có thể làm chậm trao đổi chất và khiến cơ thể bạn giữ nước và năng lượng. Cần ăn đủ bữa và đủ chất.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" style="font-size: 17px">15. Khi giảm cân không được ăn gì?</button>
+            <div class="faq-answer">
+              <p>Tránh thức ăn chứa nhiều đường tinh chế, carbs tinh chế, chất béo trans và calo rỗng như đồ ngọt, đồ uống có đường và thức ăn nhanh.</p>
+            </div>
+          </div>
+          </div>
             </section>
 
 
         <!-- Đăng Ký Nhận THÔNG TIN -->
-        <section id="newsletter">
+        <section id="bản-tin">
           <div class="email-signup">
-            <h2>Đăng ký nhận thông báo</h2>
+            <h2>Đăng ký nhận thông tin báo</h2>
             <p>Nhận email với các mẹo giảm cân, công thức nấu ăn lành mạnh, ưu đãi và hơn thế nữa!</p>
-            <form action="your-server-side-script" method="POST">
-              <form id="newsletter-form">
-                <input type="email" placeholder="Nhập email của bạn">
-                <input type="submit" value="Đăng Ký">
-            </form>
+            <form id="newsletter-form" action="javascript:void(0);" method="POST">
+              <input type="email" id="email-input" placeholder="Nhập email của bạn">
               <div class="checkboxes">
                 <label>
-                  <input type="checkbox" name="newsletter">
-                  Tôi muốn nhận bản tin SlimJoy và được thông báo về các ưu đãi và sự kiện qua e-mail. Tôi có thể thu hồi sự đồng ý của mình bất cứ lúc nào thông qua liên kết hủy đăng ký trong email hoặc tin nhắn.
+                  <input type="checkbox" name="bản-tin">
+                  Tôi muốn nhận bản tin SlimJoy và được thông báo về các ưu đãi và sự kiện qua e-mail. 
                 </label>
                 <label>
                   <input type="checkbox" name="age_confirmation" required>
                   Tôi xác nhận rằng tôi từ 18 tuổi trở lên.
-                                </label>
+                </label>
               </div>
+              <input type="submit" value="Đăng Ký" onclick="registerEmail()">
             </form>
           </div>
         </section>
+        
+        <script>
+          function registerEmail() {
+            var email = document.getElementById('email-input').value;
+            if (email) {
+              alert('Đã Đăng Ký Gmail Thành Công');
+              window.location.href = "#about";
+            } else {
+              alert('Vui Lòng Nhập Địa Chỉ Gmail Của Bạn');
+            }
+          }
+        </script>
         
 
         <!-- LIÊN HỆ -->
@@ -409,4 +527,5 @@
             <p>Email: <a href="hotrogiamcan@gmail.com">SlimJoy@gmail.com</a> <br /></p>
         </footer>
     </body>
+        <script src="main.js"></script>
     </html>

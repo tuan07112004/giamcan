@@ -1,334 +1,388 @@
 body, html {
-    margin: 0; /* Xóa lề mặc định */
-    height: 100%; /* Đặt chiều cao tối đa của viewport */
-    padding: 0; /* Thêm dòng này để đảm bảo không có padding mặc định */
-    font-family: Arial, sans-serif; /* Chọn phông chữ mặc định */
-  }
-  
-  .navbar {
-    display: flex; /* Sử dụng bố cục flexbox */
-    justify-content: space-between; /* Cân bằng khoảng cách giữa các thành phần */
-    align-items: center; /* Căn giữa các items theo chiều dọc */
-    height: 60px; /* Điều chỉnh chiều cao của navbar theo ý muốn */
-    width: 100%; /* Chiều rộng tối đa */
-    top: 0; /* Đặt navbar sát đầu trang */
-    z-index: 1000; /* Đảm bảo navbar nằm trên cùng so với các thành phần khác */
-    color: black; /* Màu chữ */
-  }
-  
-  .logo-container {
-    display: flex; /* Sử dụng bố cục flexbox */
-    align-items: center; /* Căn giữa logo và chữ theo chiều dọc */
-  }
-  
-  .logo {
-    height: 50px; /* Chiều cao của logo */
-    margin-right: 70px; /* Khoảng cách phải của logo */
-  }
-  
-  .logo-text {
-    font-size: 40px; /* Cỡ chữ của văn bản */
-    font-weight: bold; /* Độ đậm của chữ */
-  }
-  
-  .navbar a {
-    text-decoration: none; /* Bỏ gạch dưới liên kết */
-    padding: 30px; /* Đệm xung quanh liên kết */
-    color: black; /* Màu chữ */
-    font-size: 20px; /* Cỡ chữ */
-  }
-  
-  .navbar a:hover {
-    background-color: #ddd; /* Màu nền khi rê chuột lên liên kết */
-    color: black; /* Màu chữ khi rê chuột lên */
-  }
-  
-  .navbar a.active {
-    background-color: #4CAF50; /* Màu nền của liên kết đang được chọn */
-  }
-  
-  .navbar input[type="text"] {
-    padding: 14px; /* Đệm của ô nhập */
-    border: none; /* Bỏ viền */
-    margin-top: 8px; /* Khoảng cách trên */
-    margin-right: 16px; /* Khoảng cách phải */
-    font-size: 17px; /* Cỡ chữ */
-    background: rgba(255,255,255,0.5); /* Nền bán trong suốt */
-  }
-  
+  margin: 0; /* Xóa lề mặc định */
+  height: 100%; /* Đặt chiều cao tối đa của viewport */
+  padding: 0; /* Thêm dòng này để đảm bảo không có padding mặc định */
+  font-family: Arial, sans-serif; /* Chọn phông chữ mặc định */
+}
+
+.navbar {
+  display: flex; /* Sử dụng bố cục flexbox */
+  justify-content: space-between; /* Cân bằng khoảng cách giữa các thành phần */
+  align-items: center; /* Căn giữa các items theo chiều dọc */
+  height: 60px; /* Điều chỉnh chiều cao của navbar theo ý muốn */
+  width: 100%; /* Chiều rộng tối đa */
+  top: 0; /* Đặt navbar sát đầu trang */
+  z-index: 1000; /* Đảm bảo navbar nằm trên cùng so với các thành phần khác */
+  color: black; /* Màu chữ */
+}
+
+.logo-container {
+  display: flex; /* Sử dụng bố cục flexbox */
+  align-items: center; /* Căn giữa logo và chữ theo chiều dọc */
+}
+
+.logo {
+  height: 50px; /* Chiều cao của logo */
+  margin-right: 70px; /* Khoảng cách phải của logo */
+}
+
+.logo-text {
+  font-size: 40px; /* Cỡ chữ của văn bản */
+  font-weight: bold; /* Độ đậm của chữ */
+}
+
+.navbar a {
+  text-decoration: none; /* Bỏ gạch dưới liên kết */
+  padding: 30px; /* Đệm xung quanh liên kết */
+  color: black; /* Màu chữ */
+  font-size: 20px; /* Cỡ chữ */
+}
+
+.navbar a:hover {
+  background-color: #ddd; /* Màu nền khi rê chuột lên liên kết */
+  color: black; /* Màu chữ khi rê chuột lên */
+}
+
+.navbar a.active {
+  background-color: #4CAF50; /* Màu nền của liên kết đang được chọn */
+}
+
+.navbar input[type="text"] {
+  padding: 14px; /* Đệm của ô nhập */
+  border: none; /* Bỏ viền */
+  margin-top: 8px; /* Khoảng cách trên */
+  margin-right: 16px; /* Khoảng cách phải */
+  font-size: 17px; /* Cỡ chữ */
+  background: rgba(255,255,255,0.5); /* Nền bán trong suốt */
+}
+
 
 body, header, section, footer {
-  background-color: #000;
-  color: #fff;
-  margin: 0;
-  padding: 0;
+background-color: #000;
+color: #fff;
+margin: 0;
+padding: 0;
 }
 
 /* Đăng nhập và tiến trình */
 #user-login,  #progress-tracker,#user-registration, nav ul {
-  text-align: center;
+text-align: center;
 }
 
 #question {
-  width: 40%; 
+width: 40%; 
 }
 
 /* Thanh điều hướng */
 nav ul {
-  list-style: noư;
-  padding: 0;
-  margin: 0;
+list-style: noư;
+padding: 0;
+margin: 0;
 }
 
 nav ul li {
-  display: inline-block;
-  margin: 0 10px;
+display: inline-block;
+margin: 0 10px;
 }
 
 nav a {
-  text-decoration: none;
-  font-size: 18px;
-  color: #FFFFFF;
-  padding: 10px 15px;
-  border: 1px solid #FFFFFF;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+text-decoration: none;
+font-size: 18px;
+color: #FFFFFF;
+padding: 10px 15px;
+border: 1px solid #FFFFFF;
+border-radius: 5px;
+transition: background-color 0.3s;
 }
 
 .container {
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
-  background: #f8f8f8;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+max-width: 800px;
+margin: auto;
+padding: 20px;
+background: #f8f8f8;
+border-radius: 8px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .container h1 {
-  text-align: center;
-  color: #333;
+text-align: center;
+color: #333;
 }
 
 .container ul {
-  list-style: none;
-  padding: 0;
+list-style: none;
+padding: 0;
 }
 
 .container li {
-  margin-bottom: 20px;
-  padding: 10px;
-  background: #fff;
-  border-left: 5px solid #e4630d; /* A green accent line */
+margin-bottom: 20px;
+padding: 10px;
+background: #fff;
+border-left: 5px solid #e4630d; /* A green accent line */
 }
 
 .container li h2, .container li h3, .container h3 {
-  color: #e4630d;
+color: #e4630d;
 }
 
 .container p {
-  color: #666;
-  line-height: 1.6;
+color: #666;
+line-height: 1.6;
 }
 
 /* Hiệu ứng hover cho các khối */
 .container li:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 } 
 
 /* Animation khi cuộn trang */
 @keyframes fadeInUp {
-  from {
-    transform: translate3d(0, 40px, 0);
-    opacity: 0;
-  }
+from {
+  transform: translate3d(0, 40px, 0);
+  opacity: 0;
+}
 
-  to {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
+to {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
 }
 
 .container li {
-  animation: fadeInUp 0.8s ease-in-out forwards;
+animation: fadeInUp 0.8s ease-in-out forwards;
 }
 
 
 /* Tiêu đề và đoạn văn */
 h2 {
-  color: #3498db;
-  font-family: 'Arial', sans-serif;
+color: #3498db;
+font-family: 'Arial', sans-serif;
 }
 
 p {
-  font-size: 18px;
-  line-height: 1.5;
-  color: #555;
+font-size: 18px;
+line-height: 1.5;
+color: #555;
 }
 
 /* Nền cho thẻ body */
 body {
-  background-color: #f7f7f7;
+background-color: #f7f7f7;
 }
 
 /* Section */
 section {
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  margin-bottom: 20px;
+padding: 20px;
+border: 1px solid #ddd;
+border-radius: 8px;
+margin-bottom: 20px;
 }
 
 section:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Hiệu ứng hover */
 a:hover, button:hover {
-  color: #555;
-  background-color: #555;
+color: #555;
+background-color: #555;
 }
 
 /* Header */
 header {
-  padding: 20px;
-  text-align: center;
+padding: 20px;
+text-align: center;
 }
 
 h1 {
-  color: #333;
+color: #333;
 }
 
 /* Form */
 form {
-  display: flex;
-  flex-direction: column;
-  max-width: 300px;
-  margin: auto;
+display: flex;
+flex-direction: column;
+max-width: 300px;
+margin: auto;
 }
 
 input, textarea {
-  margin-bottom: 10px;
-  padding: 8px;
+margin-bottom: 10px;
+padding: 8px;
 }
 
 /* Footer */
 footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
+background-color: #333;
+color: #fff;
+padding: 20px;
+text-align: center;
 }
 
 /* Thẻ thực đơn */
 .menu-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 00px;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-gap: 00px;
 }
 
 .menu-item img {
-  width: 100%;
-  height: auto;
+width: 100%;
+height: auto;
 }
 
 /* Tư vấn trực tuyến và FAQ */
 #online-consultation {
-  background-color: #000;
-  padding: 20px;
-  margin: 20px 0;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+background-color: #000;
+padding: 20px;
+margin: 20px 0;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #online-consultation h2 {
-  color: #3498db;
-  margin-bottom: 15px;
+color: #3498db;
+margin-bottom: 15px;
 }
 
 .faq-item ul {
-  list-style-type: none;
-  padding: 0;
+list-style-type: none;
+padding: 0;
 }
 
 .faq-item li {
-  background-color: #333;
-  margin-bottom: 10px;
-  padding: 10px;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+background-color: #333;
+margin-bottom: 10px;
+padding: 10px;
+border-radius: 4px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .faq-item li:hover {
-  background-color: #0fa9f0e7;
+background-color: #0fa9f0e7;
 }
 
 #online-consultation button:hover {
-  background-color: #43A047;
+background-color: #53585a;
 }
 
 
 .image-container {
-  display: flex; /* Thiết lập này cho phép bạn sử dụng flexbox, một kỹ thuật hiện đại để sắp xếp layout */
-  justify-content: center; /* Căn giữa nội dung theo chiều ngang */
-  align-items: center; /* Căn giữa nội dung theo chiều dọc */
-  height: 120 vh; /* Tùy chọn: Điều chỉnh chiều cao theo nhu cầu của bạn */
+display: flex; /* Thiết lập này cho phép bạn sử dụng flexbox, một kỹ thuật hiện đại để sắp xếp layout */
+justify-content: center; /* Căn giữa nội dung theo chiều ngang */
+align-items: center; /* Căn giữa nội dung theo chiều dọc */
+height: 120 vh; /* Tùy chọn: Điều chỉnh chiều cao theo nhu cầu của bạn */
 }
 
 .email-signup {
-  background-color: black; /* Or any color you prefer */
-  color: white;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
+background-color: black; /* Or any color you prefer */
+color: white;
+padding: 20px;
+border-radius: 8px;
+text-align: center;
 }
 
 .email-signup h2 {
-  margin-top: 0;
+margin-top: 0;
 }
 
 .email-signup form {
-  /* Add your form styling here */
+/* Add your form styling here */
 }
 
 .email-signup input[type="email"] {
-  /* Style your email input field */
+/* Style your email input field */
 }
 
 .email-signup button {
-  /* Style your button */
+/* Style your button */
 }
 
 .email-signup .checkboxes label {
-  display: block;
-  text-align: left;
-  margin: 10px 0;
+display: block;
+text-align: left;
+margin: 10px 0;
 }
 
 .testimonials-container {
-  display: flex; /* Sử dụng flexbox để sắp xếp các thành phần */
-  justify-content: space-around; /* Khoảng cách đều giữa các thành phần */
-  padding: 20px; /* Đệm xung quanh container */
+display: flex; /* Sử dụng flexbox để sắp xếp các thành phần */
+justify-content: space-around; /* Khoảng cách đều giữa các thành phần */
+padding: 20px; /* Đệm xung quanh container */
 }
 
 .testimonial {
-  background: #fff; /* Nền trắng cho từng chứng thực */
-  padding: 20px; /* Đệm xung quanh mỗi chứng thực */
-  width: 300px; /* Chiều rộng tùy chỉnh theo ý bạn */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Bóng đổ nhẹ */
-  border-radius: 4px; /* Bo góc */
-  text-align: center; /* Căn giữa nội dung */
-  margin: 10px; /* Khoảng cách xung quanh mỗi chứng thực */
+background: #fff; /* Nền trắng cho từng chứng thực */
+padding: 20px; /* Đệm xung quanh mỗi chứng thực */
+width: 300px; /* Chiều rộng tùy chỉnh theo ý bạn */
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Bóng đổ nhẹ */
+border-radius: 4px; /* Bo góc */
+text-align: center; /* Căn giữa nội dung */
+margin: 10px; /* Khoảng cách xung quanh mỗi chứng thực */
 }
 
 .testimonial-image {
-  width: 100%; /* Điều chỉnh kích thước theo ý muốn */
-  height: auto; /* Chiều cao tự động phù hợp với chiều rộng */
-  border-radius: 50%; /* Tạo hình ảnh tròn */
-  margin-bottom: 20px; /* Khoảng cách phía dưới hình ảnh */
+width: 100%; /* Điều chỉnh kích thước theo ý muốn */
+height: auto; /* Chiều cao tự động phù hợp với chiều rộng */
+border-radius: 50%; /* Tạo hình ảnh tròn */
+margin-bottom: 20px; /* Khoảng cách phía dưới hình ảnh */
 }
 
 .testimonial-quote {
-  font-style: italic; /* Nghiêng chữ cho trích dẫn */
-  color: #555; /* Màu chữ cho trích dẫn */
+font-style: italic; /* Nghiêng chữ cho trích dẫn */
+color: #555; /* Màu chữ cho trích dẫn */
 }
 
+
+.faq {
+  max-width: 700px; /* Chiều rộng tối đa của phần tử faq là 600px */
+  margin: auto; /* Căn giữa phần tử faq trong nội dung cha của nó */
+}
+
+.faq-title {
+  text-align: center; /* Căn giữa tiêu đề FAQ */
+  margin-bottom: 50px; /* Khoảng cách dưới cùng của tiêu đề là 20px */
+}
+
+.faq-item {
+  background: #df7904ef; /* Màu nền cho mỗi mục câu hỏi là màu xám đậm */
+  margin-bottom: 10px; /* Khoảng cách dưới cùng của mỗi mục câu hỏi là 10px */
+  border: none; /* Không có viền */
+}
+
+.faq-question {
+  background: #5e5454; /* Màu nền cho câu hỏi, giống như .faq-item */
+  color: #0a0000; /* Màu chữ cho câu hỏi là màu trắng */
+  cursor: pointer; /* Con trỏ chuột sẽ thay đổi thành hình bàn tay khi di chuyển qua câu hỏi */
+  padding: 16px; /* Đệm xung quanh câu hỏi là 15px */
+  width: 100%; /* Chiều rộng của câu hỏi là 100% kích thước của phần tử cha */
+  text-align: left; /* Căn trái cho nội dung câu hỏi */
+  border: none; /* Không có viền */
+  outline: none; /* Không có đường viền khi câu hỏi được focus */
+  transition: background-color 0.3s ease; /* Thay đổi màu nền của câu hỏi sẽ diễn ra trong 0.3 giây */
+  border-bottom: 3px solid #f70303; /* Viền dưới cùng của câu hỏi là một đường màu xám rất đậm */
+}
+
+
+.faq-question::after {
+  content: '+'; /* Thêm dấu cộng vào cuối câu hỏi */
+  color: #f80d0d; /* Màu dấu cộng là màu trắng */
+  font-weight: bold; /* Dấu cộng được in đậm */
+  float: right; /* Dấu cộng sẽ nằm bên phải của câu hỏi */
+}
+
+.faq-answer {
+  padding: 0 10px; /* Đệm cho câu trả lời là 0 ở trên và dưới, 15px ở hai bên */
+  max-height: 0; /* Chiều cao tối đa ban đầu của câu trả lời là 0, tức là nó không hiển thị */
+  overflow: hidden; /* Nếu nội dung câu trả lời vượt quá chiều cao tối đa, nó sẽ bị ẩn */
+  transition: max-height 0.9s ease; /* Sự thay đổi chiều cao tối đa của câu trả lời sẽ diễn ra trong 0.3 giây */
+  background-color: #222; /* Màu nền cho câu trả lời là màu xám cực đậm */
+}
+
+.faq-answer p {
+  margin: 12px 0; /* Khoảng cách trên và dưới cho đoạn văn trong câu trả lời là 15px */
+}
+
+/* Khi câu hỏi được click và sử dụng JavaScript để thêm class 'active', nội dung CSS sau sẽ được áp dụng */
+.faq-question.active::after {
+  content: '-'; /* Thay dấu cộng bằng dấu trừ khi câu hỏi được mở ra */
+}
