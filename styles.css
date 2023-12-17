@@ -386,3 +386,54 @@ color: #555; /* Màu chữ cho trích dẫn */
 .faq-question.active::after {
   content: '-'; /* Thay dấu cộng bằng dấu trừ khi câu hỏi được mở ra */
 }
+
+#video-tutorials {
+  text-align: center;
+  padding: 20px;
+  background-color: #3498db; /* Light grey background */
+}
+
+#video-tutorials {
+  text-align: center;
+  padding: 20px;
+  background-color: #f7f7f7; /* Light grey background */
+  color: #333; /* Dark grey text color for the content */
+}
+
+#video-tutorials h2 {
+  color: #3498db; /* Specific blue color for the heading */
+  margin-bottom: 20px;
+  font-size: 24px; /* You can adjust this as needed */
+  font-weight: bold; /* Makes the heading bold */
+}
+
+.video iframe {
+  margin: 0 auto;
+  display: block; /* Center the iframes */
+  margin-bottom: 20px; /* Spacing between videos */ 
+}
+
+.video {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Additional styles for text content */
+.video .description {
+  color: #333; /* Standard text color, can be changed as needed */
+  margin-top: 10px; /* Space above the description text */
+  font-size: 18px; /* Adjust as needed */
+  line-height: 1.6; /* For better readability */
+}
+
+/* Style for links to appear more attractive */
+.video a {
+  color: #3498db; /* Link color to match the heading */
+  text-decoration: none; /* No underline for links */
+}
+
+.video a:hover {
+  text-decoration: underline; /* Underline on hover for better user experience */
+}
